@@ -1,4 +1,11 @@
-import {SafeAreaView, Image, View, Text, ScrollView} from 'react-native';
+import {
+  SafeAreaView,
+  Image,
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import React, {useState} from 'react';
 import {
   widthPercentageToDP as wp,
@@ -81,6 +88,15 @@ export default function HomeScreen() {
           <Features />
         )}
         {/* recording, clear and stop buttons */}
+        <View className="flex justify-center items-center">
+          <TouchableOpacity>
+            <Image
+              className="rounded-full mt-5"
+              source={require('../../assets/images/recordingIcon.png')}
+              style={{width: hp(10), height: hp(10)}}
+            />
+          </TouchableOpacity>
+        </View>
       </SafeAreaView>
     </View>
   );
